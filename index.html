@@ -12,14 +12,23 @@
   </head>
   <style>
     model-viewer {
-      width: 400px;
-      height: 600px;
+      width: 100vw;
+      height: 100vh;
       margin: 0 auto;
     }
   </style>
   <body>
     <!-- src="assets\AMG-GLE63_V03.glb" -->
-    
-    <model-viewer src="assets\AMG-GLE63_V03.glb" camera-controls auto-rotate ar> </model-viewer>
+
+    <model-viewer
+      src="assets\AMG-GLE63_V03.glb"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      camera-controls
+      auto-rotate
+      environment-image="neutral"
+      shadow-intensity="1"
+    >
+    </model-viewer>
   </body>
 </html>
