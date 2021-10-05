@@ -1,34 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>View model</title>
-    <script
-      type="module"
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
-    ></script>
-  </head>
-  <style>
-    model-viewer {
-      width: 100vw;
-      height: 100vh;
-      margin: 0 auto;
-    }
-  </style>
-  <body>
-    <!-- src="assets\AMG-GLE63_V03.glb" -->
 
-    <model-viewer
-      src="assets\AMG-GLE63_V04.glb"
-      ar
-      ar-modes="webxr scene-viewer quick-look"
-      camera-controls
-      auto-rotate
-      environment-image="neutral"
-      shadow-intensity="1"
-    >
-    </model-viewer>
-  </body>
+<head>
+  <title>AMG GLE63</title>
+  <meta charset="utf-8">
+  <meta name="description" content="&lt;model-viewer&gt; template">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" href="./styles.css" rel="stylesheet" />
+  <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+</head>
+
+<body>
+  <model-viewer src="assets\AMG-GLE63_V06.gltf" 
+  ios-src="assets\AMG-GLE63_V04.usdz"
+  ar ar-modes="scene-viewer webxr quick-look" camera-controls
+    environment-image="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate
+    camera-orbit="40.09deg 87.29deg auto">
+    <div class="progress-bar hide" slot="progress-bar">
+      <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+      View in your space
+    </button>
+    <div id="ar-prompt">
+      <img src="assets\ar_hand_prompt.png">
+    </div>
+  </model-viewer>
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</body>
 </html>
